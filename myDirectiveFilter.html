@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <title>Using AngularJS Directives and Data Binding!</title>
+</head>
+<body ng-init="customers=[{name:'Minal Menghani',city:'Mumbai',balance:25},{name:'Ayaan Bhagat',city:'Portsmouth',balance:50},{name:'Ali Bhagat',city:'Chennai',balance:75}]">
+    Name:
+    <input type="text" ng-model="personName"> {{personName}}
+    <br />
+    <ul>
+        <li ng-repeat="cust in customers|filter:personName|orderBy:'-name'">{{cust.name|uppercase}} - {{cust.city}} - {{cust.balance|currency}}</li>
+    </ul>
+</body>
+</html>
+
+var bulkResource = $resource(bulkSessionUrl + '/:bulkStatus' + '/:sessionID', 
+							{bulkStatus: '@bulkStatus', sessionID: '@id'},
+							{
+								create: {
+											method: 'POST',
+											headers: {
+														'Content-Type':'application/json;
+														 charset=UTF-8'
+													 }
+										},
+								end:    {
+											method: 'PUT',
+											headers: {
+														'Content-Type': 'application/json;  charset=UTF-8'
+
+													 }
+										},
+							}
+							);	

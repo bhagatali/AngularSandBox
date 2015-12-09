@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="moduleDI">
+<head>
+	<meta charset="ISO-8859-1">
+	<script src="Scripts/angular.min.js"></script>
+	<script src="Scripts/app.js"></script>
+	<title>Dependency Injection with Angular</title>
+</head>
+<body ng-controller="myController">
+	<h1>GIT Hub Repository</h1>
+	Name:
+	<input type="text" ng-model="displayName">{{displayName}}
+	</br>
+	</br>
+	{{displayThis}}
+</body>
+</html>

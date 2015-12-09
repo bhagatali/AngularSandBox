@@ -1,0 +1,3 @@
+var myController = function ($scope){
+	$scope.displayThis = "This is a Test too!"
+}

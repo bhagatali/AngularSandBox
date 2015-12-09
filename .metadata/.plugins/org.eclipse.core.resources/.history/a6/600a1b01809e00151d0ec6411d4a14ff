@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dependency Injection with Angular</title>
+<script src="/Scripts/angular.min.js"></script>
+</head>
+<body>
+	<h1>GIT Hub Repository</h1>
+</body>
+</html>

@@ -1,0 +1,8 @@
+var app = angular.module("moduleDI",[]);
+app.controller(myController, function($scope) {
+	$scope.displayThis = "This is a Test too!";
+})
+
+var myController = function ($scope){
+	
+}

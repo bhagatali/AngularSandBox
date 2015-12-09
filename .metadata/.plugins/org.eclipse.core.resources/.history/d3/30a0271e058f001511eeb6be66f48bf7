@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<script src="Scripts/angular.min.js"></script>		
+	<title>Directives and Controllers in AngularJS</title>
+	<script>
+		 var demoApp = angular.module("myModule",[]);
+		 
+  		 demoApp.config(function($routeProvider){
+			 $routeProvider
+			 	.when("/",{
+			 					controller: "SimpleController",
+			 					templateUrl: ".Views/view1.html"
+			 				   })
+			 	.when("/view2",{
+			 					controller: "SimpleController",
+			 					templateUrl: "Views/view2.html"
+			 	})
+			 	.otherwise({redirectTo:"/view1"})
+		 });  
+		
+		 demoApp.controller("SimpleController",function($scope){
+							 $scope.customers=[
+							             		{name:'Minal Menghani',city:'Mumbai',balance:25},
+							  					{name:'Ayaan Bhagat',city:'Portsmouth',balance:50},
+							  					{name:'Ali Bhagat',city:'Chennai',balance:75}
+							  				 ];
+		 });
+	</script>
+</head>
+<body>
+	<div>
+		<div ng-view></div>
+	</div>
+<!-- 	<div ng-controller="SimpleController">
+		Name: 
+		<input type="text" ng-model="searchName">{{searchName}}
+		<br />
+		<ul>
+			<li ng-repeat="cust in customers|filter:searchName|orderBy:'-name'">
+				{{cust.name}} - {{cust.city}} - {{cust.balance|currency}}
+			</li>
+		</ul>
+	</div> -->
+</body>
+</html>

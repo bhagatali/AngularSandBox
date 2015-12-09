@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<meta charset="ISO-8859-1">
+	<script src="/Scripts/angular.min.js"></script>
+	<title>Dependency Injection with Angular</title>
+</head>
+<body>
+	<h1>GIT Hub Repository</h1>
+	<input ng-model="name" type="text"></input>
+</body>
+</html>

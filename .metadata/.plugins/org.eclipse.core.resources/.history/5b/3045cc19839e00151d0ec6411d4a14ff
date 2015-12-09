@@ -1,0 +1,5 @@
+var app = angular.module("moduleDI",[]);
+
+app.controller("myController", function($scope) {
+	$scope.customer = [{LeadingQB:'Tom Brady', Team: "New England Patriots", Yards: 3912 }];
+})

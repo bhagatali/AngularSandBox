@@ -20,7 +20,7 @@
 		{{displayThis}}
 		<h1>These are my repos on Git!</h1>
 		<ul>
-			<li ng-repeat="repo in myRepos"><a ng-href="{{repo.html_url}}"> {{ repo.name }} </a></li>
+			<li ng-repeat="repo in repos"><a ng-href="{{repo.html_url}}"> {{ repo.name }} </a></li>
 		</ul>
 	</div>
 </body>

@@ -8,7 +8,7 @@ app.controller("myController", function($scope,$http) {
 			                   {Player:'Julio Jones', Position: 'WR', Team: "Atlanta Falcons", Yards: 1338 }
 			                   ];
 				$scope.displayThis = "Who is going to the Super Bowl?"
-				$scope.myRepos = repos;
+				$scope.repos = repos;
 		 	
 		 })
 })
